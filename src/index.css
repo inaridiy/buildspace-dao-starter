@@ -1,20 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 html,
 body {
   margin: 0;
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #7700ee;
-  color: #fff;
+  background-color: #fbbf24;
+  color: black;
   overflow-x: hidden;
 }
 #root {
   min-height: 100vh;
   display: flex;
+  position: relative;
+  z-index: 1;
+}
+#root::before {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background-color: #1e293b;
+  bottom: 0;
+  z-index: -1;
 }
 
 h1 {
   font-size: 5rem;
+  font-family: "Anton", sans-serif;
 }
 @media screen and (max-width: 768px) {
   h1 {
