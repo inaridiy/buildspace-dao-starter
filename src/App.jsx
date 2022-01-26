@@ -157,11 +157,8 @@ const App = () => {
   if (error instanceof UnsupportedChainIdError) {
     return (
       <div className="unsupported-network">
-        <h2>Please connect to Rinkeby</h2>
-        <p>
-          This dapp only works on the Rinkeby network, please switch networks in
-          your connected wallet.
-        </p>
+        <h2>Rinkebyネットワークに切り替えてください</h2>
+        <p>このDAppはRinkebyネットワークでのみ動作します。</p>
       </div>
     )
   } else if (!address) {
@@ -176,15 +173,15 @@ const App = () => {
   } else if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>🍪DAO Member Page</h1>
-        <p>Congratulations on being a member</p>
+        <h1>🍣DAO メンバーページ</h1>
+        <p>貴方はこのDAOのメンバーです！！</p>
         <div>
           <div>
-            <h2>Member List</h2>
+            <h2>メンバーリスト</h2>
             <table className="card">
               <thead>
                 <tr>
-                  <th>Address</th>
+                  <th>Wallet Address</th>
                   <th>Token Amount</th>
                 </tr>
               </thead>
@@ -201,7 +198,7 @@ const App = () => {
             </table>
           </div>
           <div>
-            <h2>Active Proposals</h2>
+            <h2>提案一覧</h2>
             <form
               onSubmit={async (e) => {
                 e.preventDefault()
@@ -316,10 +313,7 @@ const App = () => {
                   ? 'You Already Voted'
                   : 'Submit Votes'}
               </button>
-              <small>
-                This will trigger multiple transactions that you will need to
-                sign.
-              </small>
+              <small>まとめて署名できます</small>
             </form>
           </div>
         </div>
